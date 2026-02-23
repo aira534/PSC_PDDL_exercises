@@ -1,12 +1,12 @@
-(define (problem exploration_example_problem)
+(define (problem exploration-problem-drill)
 (:domain exploration-domain-drill)
 
-; We define 3 different samples, 2 types of trash bins, one table and a robot
 (:objects
   curiosity - robot
   base valley crater - location
   rock mineral - sample
   valley_soil crater_soil - soil
+  drill1 - drill
 )
 
 ; Initially the robot is at the base
@@ -17,6 +17,9 @@
   (sample_at mineral valley)
   (soil_at valley_soil valley)
   (soil_at crater_soil crater)
+
+  (drill_at drill1 base)
+  (drill_free drill1)
 )
 
 ; The goal is to make science!
@@ -28,5 +31,4 @@
     (soil_analysed crater_soil)
   )
 )
-
 )
